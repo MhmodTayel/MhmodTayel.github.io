@@ -1,0 +1,30 @@
+@use "./utils/utils";
+@use "./utils/tags";
+@use "./Sections/homeSection";
+@use "./Sections/workSection";
+@use "./Sections/magicwall";
+@use "./Sections/aboutSection";
+@use "./Sections/contactSection";
+@use "./Sections/testimonialSection";
+@use "./utils/mediaQuery";
+
+body {
+  background: #1d1d1d;
+  color: #fff;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.text-zone {
+  padding-left: 5rem;
+}
+
+.container {
+  position: relative;
+}
+
+html {
+  font-size: calc(60% + 0.8vmin);
+}

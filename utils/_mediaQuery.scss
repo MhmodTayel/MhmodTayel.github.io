@@ -1,0 +1,213 @@
+@media (max-width: 1200px) {
+  .section-home {
+    .hero {
+      transform: translate(0px, 1000px);
+      animation: home-hero-1200 3s forwards;
+      animation-delay: 5s;
+      @keyframes home-hero-1200 {
+        0% {
+          transform: translateX(1000px);
+        }
+        50% {
+          transform: translateX(150px);
+        }
+        100% {
+          transform: translateX(170px);
+        }
+      }
+    }
+  }
+
+  .magicwall-ul {
+    grid-template-columns: repeat(2, 1fr);
+    height: 1000px;
+  }
+}
+
+@media (max-width: 980px) {
+  .section-home {
+    height: auto;
+    padding-top: 150px;
+    margin-bottom: 150px;
+    .hero {
+      display: none;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .magicwall-ul {
+    grid-template-columns: repeat(1, 1fr);
+    height: 2000px;
+  }
+
+  .section-about {
+    flex-direction: column;
+    .text-zone {
+      width: 100%;
+    }
+    .skills {
+      margin-top: 60px;
+      .hexagon-container {
+        transform: scale(2);
+      }
+    }
+  }
+
+  .section-home {
+    margin-bottom: 10px;
+  }
+
+  .section-work {
+    .fake-big {
+      top: 0;
+    }
+  }
+
+  .section-testimonial {
+    grid-template-columns: 1fr;
+    padding: 10px;
+
+    .fake-big {
+      top: -5rem;
+    }
+  }
+
+  .section-contact {
+    flex-direction: column;
+  }
+
+  h1 {
+    transform: translateX(-0.5rem);
+    margin-top: -2rem;
+    font-size: 3rem;
+    img {
+      width: 4.9rem;
+      transform: translate(2px, 11px);
+    }
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    transform: translateX(-0.5rem);
+  }
+
+  p {
+    transform: translateX(-0.5rem);
+  }
+}
+
+@media (max-width: 395px) {
+  h1 {
+    font-size: 2.8rem;
+    img {
+      width: 4.5rem;
+    }
+  }
+  .section-work {
+    margin-bottom: 50px;
+  }
+  .magicwall {
+    &::before {
+      margin-top: -1rem;
+      left: 3rem;
+    }
+
+    &::after {
+      margin-top: 0rem;
+      margin-left: 2rem;
+    }
+  }
+
+  .section-about {
+    margin-top: 70px;
+
+    &::before {
+      top: -20px;
+      left: 2rem;
+    }
+    &::after {
+      margin-left: -22rem;
+      bottom: -12rem;
+    }
+    p {
+      max-width: 85%;
+    }
+  }
+
+  .section-testimonial {
+    padding-top: 223px;
+    margin-top: 0;
+    .fake-big {
+      top: 12rem;
+    }
+  }
+
+  h2 {
+    font-size: 2.6rem;
+    transform: translateX(1.2rem);
+  }
+
+  .section-work {
+    height: 300px;
+  }
+
+  .section-home,
+  .section-work,
+  .magicwall,
+  .section-testimonial,
+  .section-contact {
+    overflow-x: hidden;
+  }
+
+  .section-about {
+    justify-content: center;
+    align-items: center;
+    max-width: 88vw;
+    .skills {
+      transform: translateX(20px) !important;
+    }
+    p {
+      transform: translateX(1rem);
+    }
+  }
+
+  canvas {
+    display: none;
+  }
+
+  .section-contact {
+    margin-top: 20px;
+    .text-zone {
+      padding-left: 2rem;
+      &::before {
+        margin-top: 18rem;
+        left: 1rem;
+      }
+      &::after {
+        margin-top: -2rem;
+        left: 3.2rem;
+      }
+    }
+
+    iframe {
+      display: none;
+    }
+
+    form {
+      transform: translateX(-37px);
+      margin-top: 50px;
+      margin-bottom: -17rem;
+      padding-bottom: 30px;
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          &.half {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

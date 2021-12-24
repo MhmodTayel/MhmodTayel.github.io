@@ -1,0 +1,57 @@
+.skills {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  background-color: transparent;
+}
+
+.hexagon-container {
+  position: absolute;
+  transform: scale(2.5) translateY(-20px);
+  list-style: none;
+}
+
+.hexagon {
+  position: absolute;
+  width: 40px;
+  height: 45px;
+  background-color: #556c8215;
+  clip-path: polygon(50% 0, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    transform: scale(1.5);
+  }
+}
+
+@each $index, $top, $left in (1, 0px, 0px), (2, 0px, 42px), (3, 36px, 63px),
+  (4, 72px, 42px), (5, 72px, 0px), (6, 36px, -21px), (7, 36px, 21px)
+{
+  $time: 3s;
+  $delay: $time / 14;
+  .hexagon.hex_#{$index} {
+    top: $top;
+    left: $left;
+    animation: Animasearch $time ease-in-out infinite;
+    animation-delay: $delay * $index;
+  }
+}
+
+@keyframes Animasearch {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  15%,
+  50% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  65% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
